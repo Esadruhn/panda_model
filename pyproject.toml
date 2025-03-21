@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+"*" = ["*.*"]
+
+[project]
+name = "pandai"
+version = "0.0.1"
+dependencies = [
+  "torch==2.6.*",
+  "torchvision==0.21.*",
+  "nibabel==5.3.*"
+]
+requires-python = ">=3.12"
+authors = [
+  {name = "Esadruhn"},
+]
+maintainers = [
+  {name = "Esadruhn"}
+]
+description = "Implementation of the PANcreatic cancer Detection with AI paper"
+readme = "README.md"
+license-files = ["LICENSE"]
+keywords = ["pandai", "pancreatic", "cancer", "CT"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit==4.2.*",
+    "black==25.1.*",
+    "mypy==1.15.*",
+    "flake8==7.1.*",  # linting
+    "pytest==8.3.*",  # testing
+    ]
+
+[project.urls]
+Repository = "https://github.com/Esadruhn/panda_model.git"
+"Bug Tracker" = "https://github.com/Esadruhn/panda_model/issues"
+Changelog = "https://github.com/Esadruhn/panda_model/blob/main/CHANGELOG.md"
+
+# [project.scripts]
+# spam-cli = "spam:main_cli"
+
+# [project.gui-scripts]
+# spam-gui = "spam:main_gui"
+
+# [project.entry-points."spam.magical"]
+# tomatoes = "spam:main_tomatoes"
+
+
+# Mypy
+# ----
+
+[tool.mypy]
+files = "."
+
+# Use strict defaults
+strict = true
+warn_unreachable = true
+warn_no_return = true
+
+[[tool.mypy.overrides]]
+# Don't require test functions to include types
+module = "tests.*"
+allow_untyped_defs = true
+disable_error_code = "attr-defined"
