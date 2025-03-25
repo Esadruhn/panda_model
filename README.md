@@ -11,6 +11,12 @@
 [nnUNet model](https://github.com/MIC-DKFZ/nnUNet?tab=readme-ov-file)
 [Preparing data for nnUnet](https://med-imagetools.readthedocs.io/en/documentation/nnUNet/)
 
+```bash
+
+autopipeline  Pancreas-CT/manifest-1599750808610/Pancreas-CT/   Pancreas-CT/processed/   --modalities CT,RTSTRUCT   --nnunet
+
+```
+
 ## Biography
 
 [A Comparison of CT-Based Pancreatic Segmentation Deep Learning Models](https://www.sciencedirect.com/science/article/abs/pii/S1076633224003738)
