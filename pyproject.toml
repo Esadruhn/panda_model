@@ -14,7 +14,9 @@ version = "0.0.1"
 dependencies = [
   "torch==2.6.*",
   "torchvision==0.21.*",
-  "nibabel==5.3.*"
+  "SimpleITK==2.4.*",
+  "nnunetv2==2.6.*",
+  "med-imagetools==1.23.*"
 ]
 requires-python = ">=3.12"
 authors = [
